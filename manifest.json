@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "OpenJSCAD4All",
+    "version": "1.0",
+    "description": "Create magic on OpenJSCAD without writing code",
+    "icons": {
+        "48": "src/icon48.png"
+    },
+    "action": {
+        "default_icon": {
+            "48": "src/icon48.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.openjscad.com/*"
+            ],
+            "js": [
+                "src/content.js"
+            ],
+            "css": [
+                "src/popup.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "src/background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "*://*.openjscad.com/*"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "src/direct-editor-access.js",
+                "src/inject-code.js"
+            ],
+            "matches": [
+                "*://*.openjscad.com/*"
+            ]
+        }
+    ]
+}
