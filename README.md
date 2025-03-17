@@ -1,4 +1,4 @@
-# OpenJSCAD4All
+# OpenJSCAD4All (Version 0.1)
 A browser extension that allows users to create 3D shapes in OpenJSCAD without writing any code :)
 
 ## Installation
