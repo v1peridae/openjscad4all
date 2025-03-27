@@ -97,7 +97,7 @@ function initShapeBuilder() {
           <label for="shape-select">Pick a Shape:</label>
           <select id="shape-select">
             <optgroup label="3D Shapes">
-              <option value="cube">Cube</option>
+              <option value="cube">Rectangular Prism</option>
               <option value="sphere">Sphere</option>
               <option value="cylinder">Cylinder</option>
               <option value="cone">Cone</option>
@@ -113,17 +113,17 @@ function initShapeBuilder() {
         </div>
         
         <div id="shape-parameters">
-          <div class="parameter cube-param">
+          <div class="parameter rectangular-prism-param">
             <label for="size-x-input">Width (X):</label>
             <input type="number" id="size-x-input" value="10" min="0.1" step="0.1">
           </div>
           
-          <div class="parameter cube-param">
+          <div class="parameter rectangular-prism-param">
             <label for="size-y-input">Depth (Y):</label>
             <input type="number" id="size-y-input" value="10" min="0.1" step="0.1">
           </div>
           
-          <div class="parameter cube-param">
+          <div class="parameter rectangular-prism-param">
             <label for="size-z-input">Height (Z):</label>
             <input type="number" id="size-z-input" value="10" min="0.1" step="0.1">
           </div>
@@ -790,7 +790,7 @@ function updateparamVisibility() {
 
   document
     .querySelectorAll(
-      ".cube-param, .sphere-param, .cylinder-param, .cone-param, .torus-param, " +
+      ".rectangular-prism-param, .sphere-param, .cylinder-param, .cone-param, .torus-param, " +
         ".text3d-param, .circle-param, " +
         ".square-param, .polygon-param"
     )
